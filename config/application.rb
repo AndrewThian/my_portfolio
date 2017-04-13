@@ -16,10 +16,14 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module MyPortfolio
+module GeneratorApp
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    config.generators do |g|
+      g.orm             :active_record              # ORM default
+      g.template_engine :erb                        # can use HAML, SLIM
+      g.test_framework  :test_unit, fixture: false  # Can use RSPEC
+      g.stylesheets     false                       # stylesheet g (boolean)
+      g.javascripts     false                       # javascript g (boolean)
+    end
   end
 end
