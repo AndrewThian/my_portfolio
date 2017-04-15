@@ -29,11 +29,18 @@ class PortfoliosController < ApplicationController
 
   def update
     respond_to do |format|
-      if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+      if @portfolio_item.update(blog_params)
+        format.html { redirect_to @portfolio_item, notice: 'Portfolio was successfully updated.' }
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully deleted.' }
     end
   end
 
