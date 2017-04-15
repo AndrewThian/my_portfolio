@@ -2,7 +2,7 @@
 
 <% @portfolio_items.each do |item| %>
   <div>
-    <%= image_tag item.thumb_image %>
+    <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
     <p><%= item.title %></p>
     <p><%= item.subtitle %></p>
     <p><%= item.body %></p>
