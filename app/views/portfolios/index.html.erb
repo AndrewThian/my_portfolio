@@ -5,7 +5,7 @@
 <% @portfolio_items.each do |item| %>
   <div>
     <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
-    <p><%= link_to item.title, portfolio_path(item) %></p>
+    <p><%= link_to item.title, portfolio_show_path(item) %></p>
     <p><%= item.subtitle %></p>
     <p><%= item.body %></p>
     <%= link_to "Edit", edit_portfolio_path(item) %>
