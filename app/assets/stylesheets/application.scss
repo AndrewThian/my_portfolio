@@ -165,11 +165,11 @@ body {
  * custom styles
  */
 
- .card-block {
-   color: black;
-   text-shadow: none;
-   text-align: left;
- }
+.card-block {
+  color: black;
+  text-shadow: none;
+  text-align: left;
+}
 
 .auth-links a {
   color: black;
@@ -181,4 +181,17 @@ body {
 
 .register-text {
   text-align: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.sign-up > .card {
+  width: 40rem;
+  margin: 0 auto;
+  float: none;
 }
