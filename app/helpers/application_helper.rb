@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
      end
   end
+
+  def copywrite_generator
+    "&copy; #{Time.now.year} | <b>Andrew Thian</b> All rights reserved".html_safe
+  end
 end
